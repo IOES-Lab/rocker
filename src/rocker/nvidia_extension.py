@@ -87,7 +87,7 @@ class Nvidia(RockerExtension):
         self._env_subs = None
         self.name = Nvidia.get_name()
         self.supported_distros = ['Ubuntu', 'Debian GNU/Linux']
-        self.supported_versions = ['16.04', '18.04', '20.04', '10', '22.04']
+        self.supported_versions = ['16.04', '18.04', '20.04', '10', '22.04', '24.04']
 
 
     def get_environment_subs(self, cliargs={}):
@@ -151,7 +151,7 @@ class Cuda(RockerExtension):
         self._env_subs = None
         self.name = Cuda.get_name()
         self.supported_distros = ['Ubuntu', 'Debian GNU/Linux']
-        self.supported_versions = ['20.04', '22.04', '18.04', '11'] # Debian 11
+        self.supported_versions = ['20.04', '22.04', '24.04', '18.04', '11'] # Debian 11
 
     def get_environment_subs(self, cliargs={}):
         if not self._env_subs:
